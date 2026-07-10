@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Project GivingCare CareGuide — a digital caregiver resource hub for Singapore." />
+  <title>CareGuide | Project GivingCare</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Project GivingCare CareGuide home">
+        <img class="brand-logo" src="assets/project-givingcare-logo.jpg" alt="Project GivingCare logo" />
+        <div>
+          <strong>Project GivingCare</strong>
+          <span>CareGuide</span>
+        </div>
+      </a>
+      <button class="menu-button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">About us</a>
+        <a href="#start">Start here</a>
+        <a href="#guides">Care guides</a>
+        <a href="#support">Find support</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="carefest.html">CareFest</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">FOR CAREGIVERS, WITH CARE</p>
+        <h1>Practical guidance for every step of caregiving.</h1>
+        <p class="hero-copy">
+          A free digital resource hub created by Project GivingCare for caregivers,
+          families and future caregivers in Singapore.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#start">I am new to caregiving</a>
+          <a class="button secondary" href="#guides">Browse all guides</a>
+        </div>
+        <form class="search-box" role="search" onsubmit="return false;">
+          <label class="sr-only" for="site-search">Search CareGuide</label>
+          <input id="site-search" type="search" placeholder="Search: burnout, LPA, hospice, sensory play…" autocomplete="off" />
+          <button type="button" id="clear-search">Clear</button>
+        </form>
+        <div id="search-results" class="search-results" aria-live="polite"></div>
+      </div>
+      <div class="hero-card" aria-label="Quick access">
+        <p class="small-label">QUICK ACCESS</p>
+        <a href="#wellbeing"><span>♥</span> Caregiver wellbeing</a>
+        <a href="#planning"><span>✓</span> Planning ahead</a>
+        <a href="#homecare"><span>⌂</span> Caring at home</a>
+        <a href="#endoflife"><span>◌</span> End-of-life care</a>
+        <a href="#specialneeds"><span>✦</span> Children with special needs</a>
+        <a href="#support"><span>→</span> Find support</a>
+      </div>
+    </section>
+
+    <section class="notice">
+      <strong>Need urgent help?</strong>
+      <span>For a medical emergency, call 995. For immediate danger or safety concerns, call 999.</span>
+    </section>
+
+    <section id="start" class="section section-soft">
+      <div class="section-heading">
+        <p class="eyebrow">START HERE</p>
+        <h2>You do not have to solve everything today.</h2>
+        <p>Use this short checklist to organise the first steps.</p>
+      </div>
+      <div class="timeline-grid">
+        <article class="step-card">
+          <span class="step-number">1</span>
+          <h3>Understand the immediate needs</h3>
+          <p>Write down the diagnosis, current symptoms, medicines, mobility needs and upcoming appointments.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">2</span>
+          <h3>Identify your care team</h3>
+          <p>Note the main doctor, nurse, medical social worker, therapist and family members involved.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">3</span>
+          <h3>Ask about support early</h3>
+          <p>Discuss home care, respite, equipment, training, financial assistance and caregiver support groups.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">4</span>
+          <h3>Plan for yourself too</h3>
+          <p>Choose one person you can contact, one regular break and one healthcare appointment you will not postpone.</p>
+        </article>
+      </div>
+      <div class="callout">
+        <div>
+          <h3>A useful first question</h3>
+          <p>“Who can help me coordinate the care plan after discharge?”</p>
+        </div>
+        <a class="text-link" href="#navigation">Navigate the care system →</a>
+      </div>
+    </section>
+
+    <section id="guides" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">CAREGUIDE LIBRARY</p>
+        <h2>Choose what you need today.</h2>
+        <p>Each guide gives a concise overview, practical steps and trusted Singapore resources.</p>
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Filter guides">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="planning">Planning</button>
+        <button class="filter" data-filter="home">Home care</button>
+        <button class="filter" data-filter="wellbeing">Wellbeing</button>
+        <button class="filter" data-filter="end">End-of-life</button>
+        <button class="filter" data-filter="children">Special needs</button>
+      </div>
+
+      <div class="guide-grid">
+        <article id="navigation" class="guide-card" data-category="planning">
+          <div class="icon teal">↗</div>
+          <p class="card-kicker">NAVIGATING CARE</p>
+          <h3>Finding your way through care and support</h3>
+          <p>Understand home care, centre-based care, respite, rehabilitation, nursing homes and hospice services.</p>
+          <details>
+            <summary>Open guide</summary>
+            <div class="guide-body">
+              <h4>Start with the need</h4>
+              <ul>
+                <li><strong>Medical or nursing care at home:</strong> ask the care team about home medical, home nursing or home palliative services.</li>
+                <li><strong>Rehabilitation:</strong> ask about home therapy, day rehabilitation or outpatient therapy.</li>
+                <li><strong>Supervision during the day:</strong> consider day care or dementia day care where suitable.</li>
+                <li><strong>A short caregiver break:</strong> ask about respite options.</li>
+                <li><strong>Long-term residential care:</strong> discuss nursing-home suitability with a medical social worker or care coordinator.</li>
+              </ul>
+              <div class="mini-checklist">
+                <strong>Prepare before calling</strong>
+                <label><input type="checkbox"> Diagnosis and recent discharge summary</label>
+                <label><input type="checkbox"> Medication list</label>
+                <label><input type="checkbox"> Mobility and daily-living needs</label>
+                <label><input type="checkbox"> Preferred location and budget</label>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <article id="planning" class="guide-card" data-category="planning">
+          <div class="icon gold">✓</div>
+          <p class="card-kicker">PLANNING AHEAD</p>
+          <h3>ACP, LPA, Will and financial planning</h3>
+          <p>Understand what each tool does, when it applies and how they work together.</p>
+          <details>
+            <summary>Open guide</summary>
+            <div class="guide-body">
+              <div class="comparison">
+                <div><strong>ACP</strong><span>Records values and care preferences through conversations. It guides future healthcare discussions.</span></div>
+                <div><strong>LPA</strong><span>Lets a person appoint trusted donee(s) to make decisions if mental capacity is lost.</span></div>
+                <div><strong>Will</strong><span>States how assets should be distributed after death and names an executor.</span></div>
+              </div>
+              <h4>Conversation starters</h4>
+              <ul>
+                <li>“What matters most to you if your health worsens?”</li>
+                <li>“Who would you trust to speak for you?”</li>
+                <li>“Where are your important documents kept?”</li>
+              </ul>
+              <p class="note">Legal and financial information is general. Obtain professional advice for individual circumstances.</p>
+            </div>
+          </details>
+        </article>
+
+        <article id="homecare" class="guide-card" data-category="home">
+          <div class="icon green">⌂</div>
+          <p class="card-kicker">CARING AT HOME</p>
+          <h3>Home safety, equipment and practical skills</h3>
+          <p>Reduce falls, choose equipment carefully and protect both caregiver and care recipient.</p>
+          <details>
+            <summary>Open guide</summary>
+            <div class="guide-body">
+              <h4>Room-by-room safety</h4>
+              <ul>
+                <li><strong>Bathroom:</strong> non-slip surfaces, secure grab bars, adequate lighting and a suitable shower chair.</li>
+                <li><strong>Bedroom:</strong> clear walking routes, reachable light switch, suitable bed height and stable bedside support.</li>
+                <li><strong>Living areas:</strong> remove loose rugs and trailing cables; keep frequently used items within easy reach.</li>
+              </ul>
+              <h4>Before buying equipment</h4>
+              <p>Ask an occupational therapist, physiotherapist or trained professional to assess fit, transfer technique and home layout. A wheelchair, commode or hospital bed that is poorly matched can create new risks.</p>
+              <div class="warning"><strong>Do not lift alone</strong> when the person's weight, balance or behaviour makes the transfer unsafe.</div>
+            </div>
+          </details>
+        </article>
+
+        <article id="wellbeing" class="guide-card" data-category="wellbeing">
+          <div class="icon plum">♥</div>
+          <p class="card-kicker">LOOKING AFTER YOURSELF</p>
+          <h3>Caregiver burnout and coping strategies</h3>
+          <p>Recognise strain early, reduce isolation and make support part of the care plan.</p>
+          <details>
+            <summary>Open guide</summary>
+            <div class="guide-body">
+              <h4>Common signs of overload</h4>
+              <ul>
+                <li>Persistent exhaustion or poor sleep</li>
+                <li>Feeling irritable, numb, trapped or hopeless</li>
+                <li>Withdrawing from others</li>
+                <li>Missing your own medicines or appointments</li>
+                <li>Increasing conflict, unsafe handling or thoughts of harming yourself or someone else</li>
+              </ul>
+              <h4>A realistic coping plan</h4>
+              <ol>
+                <li>Name one task another person can take over.</li>
+                <li>Schedule a specific break rather than waiting for spare time.</li>
+                <li>Tell a healthcare professional how caregiving is affecting you.</li>
+                <li>Join a support group or speak with someone who understands caregiving.</li>
+              </ol>
+              <p class="note">Seek urgent help if you may harm yourself or another person, or if caregiving has become unsafe.</p>
+            </div>
+          </details>
+        </article>
+
+        <article id="palliative" class="guide-card" data-category="end">
+          <div class="icon blue">◌</div>
+          <p class="card-kicker">PALLIATIVE & HOSPICE CARE</p>
+          <h3>Understanding comfort-focused care</h3>
+          <p>Palliative care can be provided alongside treatment. Hospice services support people with serious, life-limiting illness and their families.</p>
+          <details>
+            <summary>Open guide</summary>
+            <div class="guide-body">
+              <h4>Palliative care</h4>
+              <p>Focuses on quality of life and relief of physical, psychological, social and spiritual distress. It is not limited to the final days.</p>
+              <h4>Hospice services</h4>
+              <p>May be delivered at home, in day programmes, inpatient hospices, community hospitals or through consultative support, depending on needs and eligibility.</p>
+              <h4>Questions to ask</h4>
+              <ul>
+                <li>What symptoms can the team help manage?</li>
+                <li>Who should we call after office hours?</li>
+                <li>Can care be provided at home?</li>
+                <li>What support is available for the caregiver?</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <article id="endoflife" class="guide-card" data-category="end">
+          <div class="icon rust">☾</div>
+          <p class="card-kicker">FINAL DAYS</p>
+          <h3>Signs, comfort and communication</h3>
+          <p>Know what changes may occur and how to focus on comfort while staying connected to the care team.</p>
+          <details>
+            <summary>Open guide</summary>
+            <div class="guide-body">
+              <h4>Possible changes</h4>
+              <p>People may sleep more, eat and drink less, become weaker, pass less urine, become confused or restless, and develop changes in breathing or skin temperature. Not every person experiences every sign.</p>
+              <h4>Comfort measures</h4>
+              <ul>
+                <li>Offer food and fluids gently; do not force intake.</li>
+                <li>Provide mouth care and reposition for comfort as advised.</li>
+                <li>Keep the environment calm and speak normally, even if the person does not respond.</li>
+                <li>Use prescribed medicines exactly as instructed.</li>
+              </ul>
+              <div class="warning"><strong>Call the care team</strong> for uncontrolled pain, severe breathlessness, distress, bleeding, a fall, medicine concerns or any change you are unsure about.</div>
+            </div>
+          </details>
+        </article>
+
+        <article id="grief" class="guide-card" data-category="end wellbeing">
+          <div class="icon lavender">∞</div>
+          <p class="card-kicker">GRIEF SUPPORT</p>
+          <h3>Before and after a loss</h3>
+          <p>Grief can begin before death and may affect emotions, thoughts, sleep, appetite and relationships.</p>
+          <details>
+            <summary>Open guide</summary>
+            <div class="guide-body">
+              <h4>There is no single correct timeline</h4>
+              <p>People may feel sadness, relief, guilt, anger, numbness or several emotions at once. Support may include trusted people, faith communities, peer groups, counselling or bereavement services.</p>
+              <h4>Seek additional help when</h4>
+              <ul>
+                <li>distress remains overwhelming or daily functioning is severely affected;</li>
+                <li>you are using alcohol, medicines or other substances to cope;</li>
+                <li>you have persistent thoughts of death or self-harm.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <article id="communication" class="guide-card" data-category="wellbeing planning">
+          <div class="icon peach">“ ”</div>
+          <p class="card-kicker">COMMUNICATION</p>
+          <h3>Speaking with doctors, family and care recipients</h3>
+          <p>Use clear questions, agree on responsibilities and make room for the care recipient's preferences.</p>
+          <details>
+            <summary>Open guide</summary>
+            <div class="guide-body">
+              <h4>At a medical appointment</h4>
+              <ul>
+                <li>“What should we expect next?”</li>
+                <li>“What changes require urgent medical attention?”</li>
+                <li>“Which medicines are essential, and what side effects should we watch for?”</li>
+                <li>“Who can coordinate care after discharge?”</li>
+              </ul>
+              <h4>With family</h4>
+              <p>Replace “I need more help” with a concrete request: “Can you take Mum to therapy every second Tuesday?” Record agreed tasks and review them regularly.</p>
+            </div>
+          </details>
+        </article>
+
+        <article id="specialneeds" class="guide-card" data-category="children">
+          <div class="icon pink">✦</div>
+          <p class="card-kicker">CHILDREN WITH SPECIAL NEEDS</p>
+          <h3>Development, daily care and transitions</h3>
+          <p>Track strengths and needs, work with professionals and plan ahead for school and adulthood.</p>
+          <details>
+            <summary>Open guide</summary>
+            <div class="guide-body">
+              <h4>Practical caregiving principles</h4>
+              <ul>
+                <li>Use predictable routines and visual supports where helpful.</li>
+                <li>Break tasks into smaller steps and reinforce effort.</li>
+                <li>Observe triggers, communication needs and calming strategies.</li>
+                <li>Share the same strategies across home, school and therapy teams.</li>
+              </ul>
+              <h4>Planning transitions</h4>
+              <p>Begin discussions early about early intervention, school pathways, therapy, transport, financial planning, post-school options, employment and long-term care.</p>
+            </div>
+          </details>
+        </article>
+
+        <article id="sensory" class="guide-card" data-category="children">
+          <div class="icon mint">◎</div>
+          <p class="card-kicker">SENSORY PLAY</p>
+          <h3>Low-cost play and learning ideas at home</h3>
+          <p>Adapt activities to the child's developmental level, sensory preferences and safety needs.</p>
+          <details>
+            <summary>Open guide</summary>
+            <div class="guide-body">
+              <div class="activity-grid">
+                <div><strong>Texture tray</strong><span>Explore safe fabrics, sponges and large textured objects.</span></div>
+                <div><strong>Heavy work</strong><span>Push a laundry basket, carry light groceries or move cushions.</span></div>
+                <div><strong>Movement break</strong><span>Animal walks, wall pushes or a simple indoor obstacle path.</span></div>
+                <div><strong>Calm corner</strong><span>Low lighting, familiar objects, headphones and a visual choice board.</span></div>
+              </div>
+              <p class="warning"><strong>Safety:</strong> supervise closely. Avoid small choking hazards, unsafe food items, water beads and materials that may be swallowed or inhaled.</p>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section id="support" class="section section-dark">
+      <div class="section-heading">
+        <p class="eyebrow">FIND SUPPORT</p>
+        <h2>Search by what you need, not by organisation name.</h2>
+      </div>
+      <div class="support-grid">
+        <a href="https://www.aic.sg/caregiving/" target="_blank" rel="noopener">
+          <span>Care services & caregiver support</span><strong>Agency for Integrated Care ↗</strong>
+        </a>
+        <a href="https://www.moh.gov.sg/ageing-well/caregiving/" target="_blank" rel="noopener">
+          <span>National caregiving information</span><strong>Ministry of Health ↗</strong>
+        </a>
+        <a href="https://opg-eservice.msf.gov.sg/" target="_blank" rel="noopener">
+          <span>Lasting Power of Attorney</span><strong>Office of the Public Guardian ↗</strong>
+        </a>
+        <a href="https://www.singaporehospice.org.sg/caregiver/" target="_blank" rel="noopener">
+          <span>Palliative, hospice & bereavement resources</span><strong>Singapore Hospice Council ↗</strong>
+        </a>
+        <a href="https://www.sgenable.sg/" target="_blank" rel="noopener">
+          <span>Disability services & support</span><strong>SG Enable ↗</strong>
+        </a>
+        <a href="https://www.ecda.gov.sg/parents/support-for-children-with-developmental-needs" target="_blank" rel="noopener">
+          <span>Early intervention information</span><strong>ECDA ↗</strong>
+        </a>
+      </div>
+      <p class="source-note">External information and eligibility criteria can change. Check the linked official source before acting.</p>
+    </section>
+
+    <section id="toolkit" class="section section-soft">
+      <div class="section-heading">
+        <p class="eyebrow">CAREGIVER TOOLKIT</p>
+        <h2>Simple tools you can use immediately.</h2>
+      </div>
+      <div class="tool-grid">
+        <button class="tool-card" data-print="emergency">
+          <span>01</span><strong>Emergency information sheet</strong><small>Print a one-page summary</small>
+        </button>
+        <button class="tool-card" data-print="appointment">
+          <span>02</span><strong>Questions for appointments</strong><small>Prepare before a consultation</small>
+        </button>
+        <button class="tool-card" data-print="home">
+          <span>03</span><strong>Home safety checklist</strong><small>Review room by room</small>
+        </button>
+        <button class="tool-card" data-print="respite">
+          <span>04</span><strong>Respite planning sheet</strong><small>Make breaks part of the plan</small>
+        </button>
+      </div>
+    </section>
+
+    <section id="carefest" class="section">
+      <div class="carefest-panel">
+        <div>
+          <p class="eyebrow">CAREFEST 2026</p>
+          <h2>Learn, reflect and connect.</h2>
+          <p>
+            CareFest brings caregivers, community organisations, professionals, youths and the public
+            together through CareStage, CareTrail and CareMarket.
+          </p>
+          <div class="tag-row">
+            <span>CareStage</span><span>CareTrail</span><span>CareMarket</span>
+          </div>
+        </div>
+        <div class="programme-card">
+          <p class="small-label">EVENT DETAILS</p>
+          <h3>Saturday, 12 September 2026</h3>
+          <p><strong>Time:</strong> 9.00 am–5.00 pm</p>
+          <p>Further details on the venue, CareStage timetable, speakers, booth map and partner directory will be published here.</p>
+          <div class="contact-links">
+            <a class="button secondary" href="mailto:givingcarecg@gmail.com">Email Project GivingCare</a>
+            <a class="button secondary" href="https://www.instagram.com/projgivingcare/" target="_blank" rel="noopener">@projgivingcare on Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section references">
+      <div class="section-heading">
+        <p class="eyebrow">SOURCES & REVIEW</p>
+        <h2>Built around trusted Singapore guidance.</h2>
+      </div>
+      <p>
+        Core information is based on public guidance from the Ministry of Health, Agency for Integrated Care,
+        Ministry of Social and Family Development's Office of the Public Guardian, Singapore Hospice Council,
+        SG Enable and the Early Childhood Development Agency. Content should be reviewed by relevant clinical,
+        legal and community partners before public launch.
+      </p>
+      <p class="last-reviewed">Draft website · Last reviewed July 2026</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img class="footer-logo" src="assets/project-givingcare-logo.jpg" alt="Project GivingCare logo" />
+      <div>
+        <strong>Project GivingCare</strong>
+        <span>NUS Yong Loo Lin School of Medicine</span>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:givingcarecg@gmail.com">givingcarecg@gmail.com</a>
+      <a href="https://www.instagram.com/projgivingcare/" target="_blank" rel="noopener">@projgivingcare</a>
+    </div>
+    <p>This website provides general information and does not replace medical, legal, financial or emergency advice.</p>
+  </footer>
+
+  <div id="print-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Close">×</button>
+      <div id="print-content"></div>
+      <button class="button primary" onclick="window.print()">Print this sheet</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
